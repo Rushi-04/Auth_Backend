@@ -1,0 +1,180 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Home</title>
+    
+    <style>
+      /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    background-size: cover;
+}
+
+header {
+    background: #353333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007acc;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #990000;
+    transform: scale(1.05);
+}
+
+/* New styles for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.service-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    background: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styles for better layout */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sonify.io </h1>
+        <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+        <nav>
+            <ul class="d-flex justify-content-center">
+                <li><a href="/">Home</a></li>
+                <li><a href="about/">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section>
+            <h2>About Our Company</h2>
+            <p>Sonify.io is dedicated to providing top-notch AI Solutions in the AI Industry . We pride ourselves on Focus, dedication and our Quality of Services.</p>
+        </section>
+        <section>
+            <h2>Our Services</h2>
+            <p>We offer a variety of services to meet your needs, including:</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <h3>Top Notch AI Solutions</h3>
+                        <p>Innovative solutions tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <h3>AI Cloud Services</h3>
+                        <p>Scalable and secure cloud solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <h3>AI Models</h3>
+                        <p>Custom models for various applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sonify.io. All rights reserved.</p>
+    </footer>
+</body>
+</html>
